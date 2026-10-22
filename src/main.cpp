@@ -6,8 +6,6 @@ const int pinobotoes[] = {A4,A3,A2,A1,A0};
 const int ledsdificuldade[] = {12,11,10};
 int buzzer = 13;
 
-int dificuldade = 0;
-
 Genius jogo(pinoLeds,pinobotoes,buzzer,ledsdificuldade);
 
 void setup() {
@@ -18,9 +16,9 @@ void loop() {
 
   int nRodadas = 5;
 
-  dificuldade = jogo.standby();
+  jogo.setDificuldade(jogo.standby());
 
-  switch (dificuldade)
+  switch (jogo.getDificuldade())
   {
   case 0:
     nRodadas = 7;

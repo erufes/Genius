@@ -10,6 +10,7 @@ class Genius
         const int* pinoBotoes;//vetor de botoes
         int pinoBuzzer;
         const int *ledsdificuldade;
+        int dificuldade;
 
     public:
         //construtor que recebe um vetor de leds, um vetor de botoes e o pino do buzzer    
@@ -49,6 +50,11 @@ class Genius
 
         //funcao que acende leds que indicam a dificuldade do jogo
         void LedsDificuldade(int dificuldade);
+
+        void setDificuldade(int dificuldadeNova);
+
+        int getDificuldade();
+
 };
 
 #endif

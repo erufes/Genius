@@ -6,6 +6,7 @@ Genius::Genius(const int leds[],const int botoes[],int buzzer,const int ledsdifi
     this->pinoBotoes = botoes;
     this->pinoBuzzer = buzzer;
     this->ledsdificuldade = ledsdificuldade;
+    this->dificuldade = 0;
 }
 
 void Genius::iniciar()
@@ -34,19 +35,23 @@ void Genius::avisoInicio()
     int tomContagem = 349;
     int tomInicio = 698;//escalas para o buzzer
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++) 
     {
-        digitalWrite(pinoLeds[i], HIGH);
+        digitalWrite(pinoLeds[i], HIGH);//acende todos os leds
+    }
+
+    for(int i = 0; i < 4; i++)
+    {
+        digitalWrite(pinoLeds[i], LOW);//APAGA UM POR VEZ
         tone(pinoBuzzer, tomContagem, 150);//faz uma contagem rápida de 3 sinais sonoros
         delay(150);
-        digitalWrite(pinoLeds[i], LOW);
-        delay(350);
     }
 
     for (int i = 0; i < 4; i++) 
     {
         digitalWrite(pinoLeds[i], HIGH);//acende todos os leds
     }
+    
     tone(pinoBuzzer, tomInicio, 400);//faz um ultimo aviso sonoro, mais longo
     delay(400);
 
@@ -177,8 +182,6 @@ int Genius::lerBotao()
 
 int Genius::standby()
 {
-    int dificuldade = 0;
-
     LedsDificuldade(dificuldade);
 
     while (true)//inicia o loop que faz:
@@ -278,3 +281,14 @@ void Genius::LedsDificuldade(int dificuldade)
         break;
     }
 }
+
+void Genius::setDificuldade(int dificuldadeNova)
+{
+    dificuldade = dificuldadeNova;
+}
+
+int Genius::getDificuldade()
+{
+    return dificuldade;
+}
+
