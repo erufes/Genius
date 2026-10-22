@@ -44,7 +44,7 @@ void Genius::avisoInicio()
     {
         digitalWrite(pinoLeds[i], LOW);//APAGA UM POR VEZ
         tone(pinoBuzzer, tomContagem, 150);//faz uma contagem rápida de 3 sinais sonoros
-        delay(150);
+        delay(300);
     }
 
     for (int i = 0; i < 4; i++) 
