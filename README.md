@@ -1,4 +1,4 @@
-<h1 align="center"> 🔵🟢 Genius / Simon - Arduino 🟡🔴 </h1>
+<h1 align="center"> 🔵🟢 Genius 🟡🔴 </h1>
 
 <div align="center">
 
@@ -49,3 +49,11 @@ Para compilar e enviar o projeto para o Arduino:
 3. Abra a pasta do projeto no VS Code.
 4. Conecte o **Arduino Nano** à porta USB do seu computador.
 5. Acesse a aba do **PlatformIO** na barra lateral e clique em **Upload** (ou utilize o atalho do VS Code).
+
+## 👥 Desenvolvedor
+
+<a href="https://github.com/gmolmo">
+  <img src="https://github.com/gmolmo.png" width="100px" style="border-radius: 50%;" alt="Foto"/>
+  <br />
+  <sub><b>Guilherme Olmo</b></sub>
+</a>
