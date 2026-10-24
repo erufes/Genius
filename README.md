@@ -17,7 +17,7 @@ O desenvolvimento passou pelas etapas de prototipagem em protoboard, soldagem fi
 ## ⚙️ Funcionamento
 
 ### Software
-O código foi inteiramente programado em **C++** modularizado sob o conceito de **TAD (Tipo Abstrato de Dados)**. A estrutura foi dividida em três arquivos principais:
+O código foi inteiramente programado em **C++** modularizado. A estrutura foi dividida em três arquivos principais:
 - `Genius.h`: Contém a definição da classe `Genius`, protótipos de métodos e atributos.
 - `Genius.cpp`: Implementação da lógica do jogo, controle de som via buzzer, animações de LEDs (Início, Vitória e Game Over), gerenciamento de estados e leitura dos botões.
 - `main.cpp`: Executa o setup e o loop principal com a máquina de estados do jogo.
